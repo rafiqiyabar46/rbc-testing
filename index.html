@@ -2,9 +2,27 @@
 <html>
 <head>
   <title>Welcome Page</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: #add8e6;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
-  <h1>This is the first page (index.html)</h1>
+  <h1>This is the index page</h1>
+
   <a href="second.html" target="_blank">Open Second Page in New Tab</a>
+
+  <div class="box" onclick="alert('Hello')">Click Me</div>
 </body>
 </html>
