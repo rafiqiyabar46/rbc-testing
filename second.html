@@ -25,6 +25,18 @@
     .box:hover {
       transform: scale(1.05);
     }
+    .link-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .link-button:hover {
+      background-color: #555;
+    }
   </style>
 </head>
 <body>
@@ -33,18 +45,9 @@
   <div class="box" onclick="this.textContent='This is a test'">Click Me</div>
 
   <p style="text-align:center;">
-    <button onclick="openWindow()">Open Third Page in New Window</button>
+    <a href="https://example.com" target="_blank"
+       onclick="window.open(this.href, '_blank', 'width=600,height=400'); return false;"
+       class="link-button">Open Third Page in New Window</a>
   </p>
-
-  <script>
-    function openWindow() {
-      window.open(
-        "https://example.com",
-        "popupWindow",
-        "width=600,height=400,top=100,left=100,resizable=yes,scrollbars=yes"
-      );
-    }
-  </script>
 </body>
 </html>
-
